@@ -1,4 +1,4 @@
-# Claude Code Smart Launcher 🎯 (v3.0)
+# Claude Code Smart Launcher 🎯 (v4.6)
 
 Este projeto oferece uma solução inteligente para gerenciar e alternar entre diferentes provedores de IA ao usar o **Claude Code CLI**. Com este launcher, você pode selecionar dinamicamente entre **Ollama**, **OpenRouter** (modelos gratuitos) e a API oficial da **Anthropic**.
 
@@ -88,7 +88,7 @@ export OPENROUTER_API_KEY='sua_chave_aqui'
 Basta digitar `cc` no seu terminal e escolher uma das opções:
 
 - **[1] Ollama**: Lança o Claude usando o backend do Ollama.
-- **[2] OpenRouter**: Busca modelos gratuitos e permite selecionar um ou usar o Claude 3.7 Sonnet pago.
+- **[2] OpenRouter**: Busca modelos gratuitos e permite selecionar um ou usar o Claude 3.5 Sonnet pago.
 - **[3] Anthropic**: Usa a configuração oficial padrão.
 - **[Q] Sair**: Encerra o launcher.
 

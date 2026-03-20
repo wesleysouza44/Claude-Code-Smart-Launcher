@@ -33,9 +33,9 @@ switch ($choice.ToUpper()) {
         else {
             Write-Host "`nSelecione um modelo gratuito:" -ForegroundColor Gray
             for ($i=0; $i -lt $models.Count; $i++) { Write-Host "  [$i] $($models[$i].id)" }
-            Write-Host "  [P] Usar Anthropic/Claude-3.7-Sonnet (Pago)"
+            Write-Host "  [P] Usar Anthropic/Claude-3.5-Sonnet (Pago)"
             $mChoice = Read-Host "Opção"
-            if ($mChoice.ToUpper() -eq "P") { $model = "anthropic/claude-3-7-sonnet" }
+            if ($mChoice.ToUpper() -eq "P") { $model = "anthropic/claude-3-5-sonnet" }
             elseif ($mChoice -match '^\d+$' -and [int]$mChoice -lt $models.Count) { $model = $models[[int]$mChoice].id }
             else { $model = "google/gemini-2.0-flash-lite-preview-02-05:free" }
             $env:ANTHROPIC_BASE_URL = "https://openrouter.ai/api"; $env:ANTHROPIC_AUTH_TOKEN = $env:OPENROUTER_API_KEY

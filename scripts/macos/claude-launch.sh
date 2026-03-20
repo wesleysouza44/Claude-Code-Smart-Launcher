@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Claude Code Smart Launcher for macOS/Linux (v3.0)
+# Claude Code Smart Launcher for macOS/Linux (v4.6)
 
 show_menu() {
     clear
@@ -61,12 +61,12 @@ case $choice in
             for i in "${!model_array[@]}"; do
                 echo "  [$i] ${model_array[$i]}"
             done
-            echo "  [P] Use Anthropic/Claude-3.7-Sonnet (Paid)"
+            echo "  [P] Use Anthropic/Claude-3.5-Sonnet (Paid)"
             
             read -p "Option: " mChoice
             
             if [[ "$mChoice" == "P" || "$mChoice" == "p" ]]; then
-                model="anthropic/claude-3-7-sonnet"
+                model="anthropic/claude-3-5-sonnet"
             elif [[ "$mChoice" =~ ^[0-9]+$ ]] && [ "$mChoice" -lt "${#model_array[@]}" ]; then
                 model="${model_array[$mChoice]}"
             else

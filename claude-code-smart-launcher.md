@@ -1,4 +1,4 @@
-# Claude Code Smart Launcher 🎯 (v3.0)
+# Claude Code Smart Launcher 🎯 (v4.6)
 
 Este é o guia definitivo para configurar o **Claude Code Smart Launcher**, uma ferramenta que transforma sua experiência com o Claude Code CLI, permitindo alternar e selecionar dinamicamente entre **Ollama**, **OpenRouter** e **Anthropic**.
 
@@ -55,9 +55,9 @@ switch ($choice.ToUpper()) {
         else {
             Write-Host "`nSelecione um modelo gratuito:" -ForegroundColor Gray
             for ($i=0; $i -lt $models.Count; $i++) { Write-Host "  [$i] $($models[$i].id)" }
-            Write-Host "  [P] Usar Anthropic/Claude-3.7-Sonnet (Pago)"
+            Write-Host "  [P] Usar Anthropic/Claude-3.5-Sonnet (Pago)"
             $mChoice = Read-Host "Opção"
-            if ($mChoice.ToUpper() -eq "P") { $model = "anthropic/claude-3-7-sonnet" }
+            if ($mChoice.ToUpper() -eq "P") { $model = "anthropic/claude-3-5-sonnet" }
             elseif ($mChoice -match '^\d+$' -and [int]$mChoice -lt $models.Count) { $model = $models[[int]$mChoice].id }
             else { $model = "google/gemini-2.0-flash-lite-preview-02-05:free" }
             $env:ANTHROPIC_BASE_URL = "https://openrouter.ai/api"; $env:ANTHROPIC_AUTH_TOKEN = $env:OPENROUTER_API_KEY
@@ -82,7 +82,7 @@ Set-Alias cc "$env:USERPROFILE\scripts\claude-launch.ps1"
 ---
 
 ## 🤖 Prompt para Automação (Mestre)
-"Configure o **Claude Code Smart Launcher** no meu sistema criando um diretório 'scripts', o script v3.0 com busca dinâmica de modelos (Ollama Native/OpenRouter Free Selector) e definindo o alias 'cc' no perfil do terminal (tratando caminhos com espaços)."
+"Configure o **Claude Code Smart Launcher** no meu sistema criando um diretório 'scripts', o script v4.6 com busca dinâmica de modelos (Ollama Native/OpenRouter Free Selector) e definindo o alias 'cc' no perfil do terminal (tratando caminhos com espaços)."
 
 ---
 *Fonte da Verdade - Claude Code Smart Launcher*
