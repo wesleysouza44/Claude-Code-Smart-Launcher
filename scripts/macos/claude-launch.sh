@@ -61,12 +61,15 @@ case $choice in
             for i in "${!model_array[@]}"; do
                 echo "  [$i] ${model_array[$i]}"
             done
+            echo "  [G] Use Gemini 2.5 Pro Preview (Nearly Free - Recommended)"
             echo "  [P] Use Anthropic/Claude-4.6-Sonnet (Paid)"
             echo "  [O] Use Anthropic/Claude-4.6-Opus (Strongest)"
             
             read -p "Option: " mChoice
             
-            if [[ "$mChoice" == "P" || "$mChoice" == "p" ]]; then
+            if [[ "$mChoice" == "G" || "$mChoice" == "g" ]]; then
+                model="google/gemini-2.0-pro-exp-02-05:free"
+            elif [[ "$mChoice" == "P" || "$mChoice" == "p" ]]; then
                 model="anthropic/claude-sonnet-4.6"
             elif [[ "$mChoice" == "O" || "$mChoice" == "o" ]]; then
                 model="anthropic/claude-opus-4.6"

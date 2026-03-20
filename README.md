@@ -1,10 +1,18 @@
 # Claude Code Smart Launcher 🎯 (v4.6)
 
-Este projeto oferece uma solução inteligente para gerenciar e alternar entre diferentes provedores de IA ao usar o **Claude Code CLI**. Com este launcher, você pode selecionar dinamicamente entre **Ollama**, **OpenRouter** (modelos gratuitos) e a API oficial da **Anthropic**.
+Este projeto oferece uma solução inteligente para gerenciar e alternar entre diferentes provedores de IA ao usar o **Claude Code CLI**. Com este launcher, você pode selecionar dinamicamente entre **Ollama**, **OpenRouter** (modelos gratuitos e premium) e a API oficial da **Anthropic**.
 
 ---
 Desenvolvido por **Wesley Souza** 🚀
 ---
+
+## 🏎️ O Conceito: Carro vs Motor
+
+Imagine que o **Claude Code** é um carro de Fórmula 1:
+- **O Carro**: São as skills, MCPs, memória e contexto. É a estrutura potente que permite realizar tarefas complexas.
+- **O Motor**: É a LLM (o modelo) que faz o carro andar. 
+
+O problema é que o motor oficial (Opus) pode ser caro. Este launcher permite que você **troque o motor** do seu carro de F1, colocando modelos como **Gemini 2.5 Pro** ou modelos gratuitos do **OpenRouter**, mantendo todas as funcionalidades (skills) do Claude Code.
 
 ## 🚀 Recursos
 
@@ -88,7 +96,7 @@ export OPENROUTER_API_KEY='sua_chave_aqui'
 Basta digitar `cc` no seu terminal e escolher uma das opções:
 
 - **[1] Ollama**: Lança o Claude usando o backend do Ollama.
-- **[2] OpenRouter**: Busca modelos gratuitos e permite selecionar um ou usar o Claude 4.6 Sonnet/Opus pago.
+- **[2] OpenRouter**: Busca modelos gratuitos e permite selecionar o **Gemini 2.5 Pro (Recomendado)** ou os novos **Claude 4.6 Sonnet/Opus**.
 - **[3] Anthropic**: Usa a configuração oficial padrão.
 - **[Q] Sair**: Encerra o launcher.
 

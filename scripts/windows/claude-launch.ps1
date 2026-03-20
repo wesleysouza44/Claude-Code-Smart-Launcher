@@ -33,10 +33,12 @@ switch ($choice.ToUpper()) {
         else {
             Write-Host "`nSelecione um modelo gratuito:" -ForegroundColor Gray
             for ($i=0; $i -lt $models.Count; $i++) { Write-Host "  [$i] $($models[$i].id)" }
+            Write-Host "  [G] Usar Gemini 2.5 Pro Preview (Quase Grátis - Recomendado)"
             Write-Host "  [P] Usar Anthropic/Claude-4.6-Sonnet (Pago)"
             Write-Host "  [O] Usar Anthropic/Claude-4.6-Opus (Mais Forte)"
             $mChoice = Read-Host "Opção"
-            if ($mChoice.ToUpper() -eq "P") { $model = "anthropic/claude-sonnet-4.6" }
+            if ($mChoice.ToUpper() -eq "G") { $model = "google/gemini-2.0-pro-exp-02-05:free" } # Gemini 2.5 Pro no OpenRouter
+            elseif ($mChoice.ToUpper() -eq "P") { $model = "anthropic/claude-sonnet-4.6" }
             elseif ($mChoice.ToUpper() -eq "O") { $model = "anthropic/claude-opus-4.6" }
             elseif ($mChoice -match '^\d+$' -and [int]$mChoice -lt $models.Count) { $model = $models[[int]$mChoice].id }
             else { $model = "google/gemini-2.0-flash-lite-preview-02-05:free" }
