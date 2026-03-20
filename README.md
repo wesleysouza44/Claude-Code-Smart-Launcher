@@ -2,6 +2,10 @@
 
 Este projeto oferece uma solução inteligente para gerenciar e alternar entre diferentes provedores de IA ao usar o **Claude Code CLI**. Com este launcher, você pode selecionar dinamicamente entre **Ollama**, **OpenRouter** (modelos gratuitos) e a API oficial da **Anthropic**.
 
+---
+Desenvolvido por **Wesley Souza** 🚀
+---
+
 ## 🚀 Recursos
 
 - **Multi-plataforma**: Versões compatíveis com **Windows**, **macOS** e **Linux**.
@@ -64,6 +68,21 @@ Depois, execute `source ~/.zshrc` (ou o arquivo correspondente).
 
 ---
 
+## 🛡️ Segurança e Configuração
+
+Para não precisar digitar sua API Key toda vez, você pode configurá-la permanentemente no seu sistema:
+
+**Windows (PowerShell):**
+```powershell
+[System.Environment]::SetEnvironmentVariable('OPENROUTER_API_KEY', 'sua_chave_aqui', 'User')
+```
+
+**macOS/Linux (Bash/Zsh):**
+Adicione ao seu `~/.zshrc` ou `~/.bashrc`:
+```bash
+export OPENROUTER_API_KEY='sua_chave_aqui'
+```
+
 ## 🎮 Como Usar
 
 Basta digitar `cc` no seu terminal e escolher uma das opções:
@@ -74,4 +93,4 @@ Basta digitar `cc` no seu terminal e escolher uma das opções:
 - **[Q] Sair**: Encerra o launcher.
 
 ---
-*Desenvolvido para otimizar o fluxo de trabalho com Claude Code.*
+*Desenvolvido por Wesley Souza para otimizar o fluxo de trabalho com Claude Code.*
