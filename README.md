@@ -88,7 +88,7 @@ export OPENROUTER_API_KEY='sua_chave_aqui'
 Basta digitar `cc` no seu terminal e escolher uma das opções:
 
 - **[1] Ollama**: Lança o Claude usando o backend do Ollama.
-- **[2] OpenRouter**: Busca modelos gratuitos e permite selecionar um ou usar o Claude 3.5 Sonnet pago.
+- **[2] OpenRouter**: Busca modelos gratuitos e permite selecionar um ou usar o Claude 4.6 Sonnet/Opus pago.
 - **[3] Anthropic**: Usa a configuração oficial padrão.
 - **[Q] Sair**: Encerra o launcher.
 

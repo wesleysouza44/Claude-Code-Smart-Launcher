@@ -61,12 +61,15 @@ case $choice in
             for i in "${!model_array[@]}"; do
                 echo "  [$i] ${model_array[$i]}"
             done
-            echo "  [P] Use Anthropic/Claude-3.5-Sonnet (Paid)"
+            echo "  [P] Use Anthropic/Claude-4.6-Sonnet (Paid)"
+            echo "  [O] Use Anthropic/Claude-4.6-Opus (Strongest)"
             
             read -p "Option: " mChoice
             
             if [[ "$mChoice" == "P" || "$mChoice" == "p" ]]; then
-                model="anthropic/claude-3-5-sonnet"
+                model="anthropic/claude-sonnet-4.6"
+            elif [[ "$mChoice" == "O" || "$mChoice" == "o" ]]; then
+                model="anthropic/claude-opus-4.6"
             elif [[ "$mChoice" =~ ^[0-9]+$ ]] && [ "$mChoice" -lt "${#model_array[@]}" ]; then
                 model="${model_array[$mChoice]}"
             else
