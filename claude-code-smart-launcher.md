@@ -9,7 +9,7 @@ Este é o guia definitivo para configurar o **Claude Code Smart Launcher**, uma 
 ### 1. Pré-requisitos
 - **Node.js**: [nodejs.org](https://nodejs.org/)
 - **Claude Code CLI**: `npm install -g @anthropic-ai/claude-code`
-- **Ollama**: [ollama.com](https://ollama.com/) (para modelos locais)
+- **Ollama**: [ollama.com](https://ollama.com/) (**Obrigatório apenas para modelos locais**)
 
 ### 2. Criar Pasta de Scripts
 ```powershell

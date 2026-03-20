@@ -24,7 +24,7 @@ Antes de começar, certifique-se de ter instalado:
    ```bash
    npm install -g @anthropic-ai/claude-code
    ```
-3. **Ollama** (opcional para modelos locais): [ollama.com](https://ollama.com/)
+3. **Ollama**: **Obrigatório apenas para modelos locais** (Opção 1). Se você for usar apenas OpenRouter ou Anthropic (nuvem), não precisa instalá-lo. [ollama.com](https://ollama.com/)
 
 ---
 
